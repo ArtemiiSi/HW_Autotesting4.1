@@ -41,10 +41,10 @@ public class CardTest {
         $("[placeholder=\"Город\"]").setValue("Иркутск");
         $("[data-test-id=date] input").sendKeys(formatter.format(newDate));
         $("[data-test-id=\"name\"] input").setValue("Иванов Иван");
-        $("[data-test-id=\"phone\"] input").setValue("5432рпв098д");
+        $("[data-test-id=\"phone\"] input").setValue("5432рпв0д");
         $x("//span[contains(text(), 'Я соглашаюсь с условиями обработки')]").click();
         $(".button__content").click();
-        $("[data-test-id=phone] .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79141234567."));
+        $("[data-test-id=phone] .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
     }
 
 
